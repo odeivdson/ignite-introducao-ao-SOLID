@@ -13,7 +13,7 @@ class ShowUserProfileController {
 
     return response.status(200).send(user);
   } catch(error) {
-    return response.status(404).send({error: 'User not found'})
+    return response.status(404).send({error: error.message})
   }
   }
 }

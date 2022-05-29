@@ -14,7 +14,7 @@ class CreateUserController {
 
       return response.status(201).send(userCreated);
     } catch(error) {
-      return response.status(400).send({error: 'User already exists'});
+      return response.status(400).send({error: error.message});
     }
   }
 }

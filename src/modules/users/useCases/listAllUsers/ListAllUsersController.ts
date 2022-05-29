@@ -17,7 +17,7 @@ class ListAllUsersController {
 
       return response.status(200).send(users);
     } catch(error) {
-      return response.status(400).send({error: 'Oops, list user is not allowed'});
+      return response.status(400).send({error: error.message});
     }
   }
 }
